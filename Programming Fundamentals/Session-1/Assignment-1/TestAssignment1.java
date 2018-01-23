@@ -3,7 +3,7 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 
 
-public class testAssignment1 {
+public class TestAssignment1 {
 
 	Assignment1 assign = new Assignment1();		// object 'assign' to test 'binaryToOctal' method
 	
