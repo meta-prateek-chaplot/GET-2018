@@ -63,7 +63,7 @@ public class Assignment1 {
 	
 	// method to print pyramid
 	public String[] printPyramid(int n) {
-		String pyramid[] = new String[2*n-1];
+		String pyramid[] = (n==0) ? new String[0] : new String[2*n-1];
 		int row = n*2 - 1;		// number of rows in the pyramid
 		
 		Assignment1 assign = new Assignment1();

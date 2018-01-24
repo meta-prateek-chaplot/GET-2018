@@ -30,4 +30,12 @@ public class Assignment1Test {
 		assertArrayEquals(actual, expected);
 	}
 	
+	@Test
+	public void emptryArrayTest() {
+		String actual[] = assign.printPyramid(0);
+		String expected[] = {};
+		
+		assertArrayEquals(actual, expected);
+	}
+	
 }
