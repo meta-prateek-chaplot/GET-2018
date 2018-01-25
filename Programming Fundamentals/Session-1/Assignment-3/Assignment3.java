@@ -10,8 +10,8 @@ public class Assignment3 {
 		int idx=0;
 		int length = input.length;
 		
-		for(int i=1, count=1; i<length; i++) {
-			if(input[i-1] < input[i]) {		// if array is increasing, then increment 'count'
+		for(int iterator=0, count=1; iterator<length-1; iterator++) {
+			if(input[iterator] < input[iterator+1]) {		// if array is increasing, then increment 'count'
 				count++;
 			} else {	
 				count=1;		// if not, then set 'count' to 1
@@ -19,7 +19,7 @@ public class Assignment3 {
 			
 			if(count > maxCount) {		// setting max length of sequence to 'maxCount'
 				maxCount = count;
-				idx = i-maxCount;
+				idx = iterator+1-maxCount;
 			}
 			
 		}
