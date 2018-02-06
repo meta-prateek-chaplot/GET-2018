@@ -1,43 +1,110 @@
-import java.util.List;
 import java.util.ArrayList;
+import java.util.List;
 /**
  * 
  * @author Prateek
- * This class is responsible for initializing Composite element i.e. the elements which have more tags inside it. 
  *
  */
 public class CompositeElement extends Element{
 	
-	// List stores tags inside parent tag
-	List<Element> element = new ArrayList<Element>();
+	List<Element> list = new ArrayList<Element>();	// list contains elements inside of the current composite element
 	
-	// constructor to initialization of values
-	public CompositeElement(String id, String className) {
+	/**
+	 * calls the parent class constructor
+	 * @param id : element id attribute
+	 * @param className : element class attribute
+	 */
+	CompositeElement(String id, String className) {
+		super(id, className);	// calling parent class for initialization
+	}
+	
+	/**
+	 * adds the element to the composite element from which
+	 * it is called
+	 * @param tag : element that is to be added
+	 */
+	void add(Element tag) {
+		try {
+			list.add(tag);			
+		} catch (Exception e) {
+			
+		}
 		
-		// calling parent class for initialization
-		super(id,className);
 	}
 	
-	
-	
-	// method for adding Tag
-	void add(Element tag){
+	/**
+	 * used to match the id of all the elements present
+	 * inside the composite element along with the element itself
+	 * @param id : element id that is to be matched
+	 */
+	Element findById(String id) {
+		try {
 		
-		// Adding tag or element
-		element.add(tag);
+			if(this.id == id) {
+				return this;
+			}
+			
+			// loop to match elements present inside the composite element itself
+			for(Element tag: list) {
+				Element return_tag = tag.findById(id);
+				
+				if(return_tag != null) {
+					return return_tag;
+				}
+			}
+			
+		} catch (Exception e) {
+			
+		}
+
+		return null;
 	}
 	
-	// Returns list of tags inside parent tag
-	List<Element> tagList(){
+	/**
+	 * @param className : element class that is to be searched
+	 */
+	List<Element> findByClass(String className) {
+		List<Element> result = new ArrayList<Element>();
 		
-		// returns list of composite element tag
-		return this.element;
+		try {
+			
+			if(this.className.equals(className)) {
+				result.add(this);
+			}
+			
+			// loop to match elements present inside the composite element itself
+			for(Element tag: list) {
+				result.addAll(tag.findByClass(className));
+			}
+			
+		} catch (Exception e) {
+			
+		}
+		
+		return result;
 	}
 	
-	// for checking instance of composite element
-	public boolean has_instance(){
-		return true;
+	/**
+	 * recursive function used to display all the elements in HTML code format
+	 * @param spaces : used to give proper indentation while displaying
+	 */
+	List<String> displayDomRecursive(String spaces) {
+		List<String> result = new ArrayList<String>();
+		
+		try {
+			
+			result.add(spaces + "<" + this.getClass().getSimpleName() + " id='" + this.getId() + "' class='" + this.getClassName() + "'>");
+			
+			for(Element tag: list) {
+				result.addAll(tag.displayDomRecursive(spaces + "	"));
+			}
+			
+			result.add(spaces + "</" + this.getClass().getSimpleName() + ">");
+			
+		} catch (Exception e) {
+			
+		}
+		
+		return result;
 	}
-	
-	
 }

@@ -1,42 +1,64 @@
+import java.util.List;
 /**
  * 
  * @author Prateek
- * Abstract class which contains methods to find details of tag
+ *
  */
 abstract class Element {
+	String id;	// id of tag
+	String className; // class of tag
 	
-	// id of tag
-	String id;
-	
-	// class of tag
-	String className;
-	
-	// Constructor for initializing values
-	public Element(String id, String className) {
-		
-		// initializing id
-		this.id = id;
-		
-		// initializing class name
+	/**
+	 * constructor used to assign values
+	 * @param id
+	 * @param className
+	 */
+	Element(String id, String className) {
+		this.id = id;	// initializing id
 		this.className = className;
 	}
 	
-	// returns id of a particular tag
-	public String getId() {
-		
+	/**
+	 * used to get element id
+	 * @return
+	 */
+	String getId() {
 		return id;
 	}
 	
-	// returns class name of a particular tag
-	public String getClassName() {
-		
+	/**
+	 * used to get className of the element
+	 * @return
+	 */
+	String getClassName() {
 		return className;
 	}
-
-	// for checking instance of element
-	public boolean has_instance() {
-		
-		// by default value is false
-		return false;
-	}		
+	
+	/**
+	 * find id function to be overridden
+	 * @param id
+	 * @return element matched
+	 */
+	Element findById(String id) {
+		return null;
+	}
+	
+	/**
+	 * find id function to be overridden
+	 * @param className
+	 * @return list of elements matched
+	 */
+	List<Element> findByClass(String className) {
+		return null;
+	}
+	
+	/**
+	 * display function to be overridden
+	 * @param spaces : used to indentation purpose
+	 * @return the string containing HTML code
+	 */
+	List<String> displayDomRecursive(String spaces) {
+		return null;
+	}
+	
 }

@@ -3,13 +3,13 @@
  * @author Prateek
  *
  */
-public class Span extends CompositeElement{
+public class Root extends CompositeElement {
 	/**
-	 * constructor used to assign values by calling parent class constructor
+	 * constructor used to assign values
 	 * @param id : element id
 	 * @param className : element className
 	 */
-	Span(String id, String className) {
+	Root(String id, String className) {
 		super(id, className);	// calling parent class for initialization
 	}
 }
