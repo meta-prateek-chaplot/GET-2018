@@ -1,28 +1,47 @@
+/**
+ * 
+ * @author Prateek
+ *
+ */
 import java.util.ArrayList;
 import java.util.List;
 
-
 public class Workflow {
+	String workflowName;	// store the name of work flow
+	List<State> stateList = new ArrayList<State>();		// stores all the states in list
+	State currentState;		// to get the current state in function 'eventCheck' and in 'setStartState'
+	int stateCounter=0;		// used in function 'eventCheck' for getting the next state from 'stateList'
+	List<Event> eventList = new ArrayList<Event>();		// stores all the events in list
+	List<Transition> transitionList = new ArrayList<Transition>();	// stores all the transitions in list
 	
-	String workflowName;
-	List<State> stateList = new ArrayList<State>();
-	State currentState;
-	int stateCounter=0;
-	List<Event> eventList = new ArrayList<Event>();
-	List<Transition> transitionList = new ArrayList<Transition>();
-	
+	/**
+	 * constructor to initialize the name of work flow
+	 * @param workflowName
+	 */
 	Workflow(String workflowName) {
 		this.workflowName = workflowName;
 	}
 	
+	/**
+	 * used to add the 'state' to 'stateList'
+	 * @param state
+	 */
 	void addState(State state) {
 		stateList.add(state);
 	}
 	
+	/**
+	 * used to set the value of 'currentState'
+	 */
 	void setStartState() {
-		currentState = this.stateList.get(stateCounter);
+		currentState = this.stateList.get(0);
 	}
 	
+	/**
+	 * used to add 'event' to 'eventList' and calls 'eventCheck'
+	 * @param event
+	 * @throws NullPointerException
+	 */
 	void transitionStep(Event event) throws NullPointerException {
 		if(event.eventName == " " || event.eventName == "") {
 			throw new NullPointerException();
@@ -33,12 +52,18 @@ public class Workflow {
 		eventCheck(event, event.eventName);
 	}
 	
+	/**
+	 * used to add 'transition' to 'transitionList'
+	 * @param event
+	 * @param eventStatus
+	 * @return
+	 */
 	String eventCheck(Event event, String eventStatus) {
 		String status = null;
 		
 		event.setStatus(eventStatus);
 		
-		// if candidate status is rejected
+		// if-else candidate status
 		Transition transition;
 		
 		if(event.getStatus() == false) {
@@ -61,6 +86,10 @@ public class Workflow {
 		return status;
 	}
 	
+	/**
+	 * getter function to get transitionList
+	 * @return transitionList of type List<Transition>
+	 */
 	List<Transition> getTransitionList() {
 		return transitionList;
 	}
