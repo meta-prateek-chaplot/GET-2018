@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css?family=Oxygen:300');
+
+* {
+	padding: 0px;
+	margin: 0px;
+	list-style: none;
+	font-family: 'Oxygen', sans-serif;
+	background-color: #eee;
+	text-decoration: none;
+	text-align: center;
+	line-height: 150%;
+}
+
+#header {
+	padding: 15px 0;
+	margin-bottom: 25px;
+	/*text-align: center;*/
+	color: #fff;
+	background-color: #107c91;
+	font-weight: bold;
+	font-size: 25px;
+	box-shadow: 0 0 15px #888;
+}
+
+#wrapper {
+	display: flex;
+}
+
+.photo {
+	flex: 1;
+}
+
+.photo img {
+	content: url('../images/prateek-photo.jpeg');
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 25px;
+	border: 1px solid black;
+	border-radius: 8px;
+	width: 30%;
+	box-shadow: 0 0 10px #888;
+}
+
+.photo div h2 {
+	font-weight: bold;
+}
+
+.photo div h4 {
+	font-weight: normal;
+}
+
+.info {
+	flex: 1;
+	margin-right: 15%;
+}
+
+.contact, .additional, .personal {
+	/*border: 1px solid black;*/
+	margin-bottom: 30px;
+	box-shadow: 0 0 10px #888;
+}
+
+.heading {
+	border: 1px solid black;
+	padding: 5px;
+	background-color: #ccc;
+	font-weight: bold;
+	font-size: 1.2em;
+}
+
+.information {
+	border: 1px solid black;
+	border-top: none;
+	display: flex;
+	/*background-color: #ddd;*/
+}
+
+.information .info-type {
+	flex: 1;
+	padding: 5px;
+	background-color: #ddd;
+	border-right: 1px solid black;
+	font-weight: bold;
+}
+
+.information .info-content {
+	flex: 1;
+	padding: 5px;
+	background-color: #ddd;
+}
+
+a {
+	background-color: #ddd;
+	font-weight: bold;
+	/*color: #107c91;*/
+}
+
+a:hover {
+	text-decoration: underline;
+	font-weight: normal;
+	color: #107c91;
+}
