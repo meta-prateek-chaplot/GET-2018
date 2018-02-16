@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css?family=Oxygen');
+
+* {
+	padding: 0px;
+	margin: 0px;
+	text-decoration: none;
+	font-family: 'Oxygen', sans-serif;
+	list-style: none;
+	background-color: #eee;
+}
+
+.margin {
+	margin: 10px;
+}
+
+.padding {
+	padding: 10px;
+}
+
+.center {
+	margin: 0 auto;
+}
+
+.border {
+	border: 1px solid #000;
+}
+
+.overflow {
+	overflow: hidden;
+}
+
+.float-l {
+	float: left;
+}
+
+.float-r {
+	float: right;
+}
+
+.bg-black {
+	background-color: #000;
+}
+
+.bg-blue {
+	background-color: #09f;
+}
+
+.color-w {
+	color: #eee;
+}
+
+.font-size {
+	font-size: 20px;
+}
+
+.text-align {
+	text-align: center;
+}
+
+.upper-case {
+	text-transform: uppercase;
+}
+
+header nav a {
+	padding-right: 15px;
+	color: #09f;
+}
+header nav a:hover {
+	color: #eee;
+}
+
+.top-box {
+	padding: 200px;
+}
+
+.top-box .up-text {
+	border: 2.5px solid #eee;
+	border-radius: 5px;
+	padding: 50px;
+	width: 60%;
+	margin: 0 auto;
+	font-size: 50px;
+}
+
+.top-box .mid-text {
+	padding: 20px;
+}
+
+.top-box .low-text {
+	border-radius: 5px;
+	width: 30%;
+	margin: 0 auto;
+	padding: 15px;
+	background-color: #eee;
+	color: #09f;
+	font-size: 25px;
+}
+
+.mid-box {
+	margin: 10px;
+}
+
+.mid-box .heading {
+	font-weight: bold;
+}
+
+.mid-box .products {
+	display: flex;
+}
+
+.mid-box .products .box {
+	flex: 1;
+}
+
+.mid-box .products .box .prod-name {
+	font-weight: bold;
+	color: #09f;
+}
+
+.down-box {
+	display: flex;
+	padding: 50px;
+}
+
+.down-box .left {
+	flex: 2;
+	diplay: flex;
+}
+
+.down-box .left .first-pic {
+	content: url('../images/settings-flat-file-icon.png');
+	background-color: transparent;
+	width: 30%;
+	flex: 1;
+}
+
+.down-box .left .second-pic {
+	content: url('../images/downloads-flat-file-icon.png');
+	background-color: transparent;
+	width: 30%;
+	flex: 1;
+}
+
+.down-box .right {
+	flex: 3;
+	color: white;
+}
+
+.down-box .right .heading {
+	padding: 20px;
+}
+
+.down-box .right .text {
+	padding: 20px;
+	color: #999;
+}
+
+.final-box .heading {
+	font-weight: bold;
+}
+
+.final-box .wrapper {
+	display: flex;
+}
+
+.final-box .wrapper .form-box {
+	flex: 2;
+}
+
+.final-box .wrapper .about-us {
+	flex: 3;
+}
+
+.final-box .wrapper form {
+	font-weight: bold;
+}
+
+.final-box .wrapper form input {
+	margin-bottom: 15px;
+}
+
+footer {
+	padding: 15px;
+	color: #eee;
+}
+
+.sign-up {
+	padding: 10px;
+	border: none;
+	border-radius: 5px;
+}
