@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css?family=Oxygen');
+
+* {
+	padding: 0px;
+	margin: 0px;
+	font-family: 'Oxygen', sans-serif;
+	background-color: #ddd;
+}
+
+.border {
+	border: 1px solid black;
+	border-radius: 8px;
+}
+
+.padding {
+	padding: 30px;
+}
+
+.bg-red {
+	background-color: red;
+}
+
+.box-size {
+	width: 200px;
+	height: 200px;
+}
+
+.center {
+	margin: 0 auto;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.transition {
+	transition-duration: 2.5s;
+}
+
+.rotate:hover {
+	transform: rotate(45deg);
+}
+
+.scale:hover {
+	transform: scale(1.5, 1.5);
+}
+
+.skew:hover {
+	transform: skew(10deg, 10deg);
+}
+
+.translate:hover {
+	transform: translate(50px, 50px);
+}
+
+.container {
+	width: 80%;
+	margin: 30px auto;
+}
+
+.upper-box {
+	display: flex;
+}
+
+.box-1 {
+	flex: 1;
+}
+
+.box-2 {
+	flex: 1;
+}
+
+.lower-box {
+	display: flex;
+}
+
+.box-3 {
+	flex: 1;
+}
+
+.box-4 {
+	flex: 1;
+}
