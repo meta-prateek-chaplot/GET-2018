@@ -7,6 +7,7 @@ function fillCircle(){
   ctx.fillStyle = "blue";
   ctx.fill();
 }
+
 function semiCircle(){
   var c = document.getElementById("semi-circle");
   var ctx = c.getContext("2d");
@@ -22,6 +23,7 @@ function semiCircle(){
   ctx1.lineWidth   = 4;
   ctx1.stroke();
 }
+
 function strokeCircle(){
   var c = document.getElementById("stroke-circle");
   var ctx = c.getContext("2d");
@@ -31,6 +33,7 @@ function strokeCircle(){
   ctx.lineWidth   = 5;
   ctx.stroke();
 }
+
 function plusCircle() {
   var c = document.getElementById("plus-circle");
   var ctx = c.getContext("2d");
@@ -53,6 +56,7 @@ function plusCircle() {
   hline.lineWidth   = 15;
   hline.stroke();
 }
+
 function triangle() {
   var c = document.getElementById("triangle");
   var line1 = c.getContext("2d");
@@ -65,6 +69,7 @@ function triangle() {
   line1.fill();
   line1.stroke();
 }
+
 function rectangle() {
   var c = document.getElementById("rectangle");
   var ctx = c.getContext("2d");
