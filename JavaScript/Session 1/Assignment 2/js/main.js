@@ -1,9 +1,9 @@
-function city () {
+function cityFunc() {
 	var city = document.contact.city;
-	var citybox = document.getElementById('citybox');
+	var citybox = document.getElementById('city-box');
 
 	citybox.style.display = "table-row";
-	document.contact.citytext.value = "you have selected this city: " + city;
+	document.contact.cityText.value = "You have selected: " + city.value;
 }
 
 function formValidation () {

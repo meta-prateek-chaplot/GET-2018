@@ -39,7 +39,7 @@
 	      			<label>
 	      				<td>City</td>
 	      				<td>
-	      					<select name="city" onchange="city();">
+	      					<select name="city" onchange="cityFunc();">
 	      						<option selected disabled></option>
 	      						<option value="ajmer">Ajmer</option>
 	      						<option value="bikaner">Bikaner</option>
@@ -50,10 +50,10 @@
 	      			</label>
 	      		</tr>
 
-	      		<tr style = "display: none" id = "city-box">
+	      		<tr align="left" style="display:none;" id = "city-box">
 					<label>
 						<td>City</td>
-						<td><input type="city" name="city-text" disabled="true" width="100%"/></td>
+						<td><input type="city" name="cityText" disabled="true" width="100%"/></td>
 					</label>
 				</tr>
 
