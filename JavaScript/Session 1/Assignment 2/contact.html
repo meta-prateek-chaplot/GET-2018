@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Contact Us!</title>
+</head>
+<body>
+	<table width=60% align=center>
+	  <tr>
+	    <td width=10%><img src="images/html5_logo.png" alt="" width=50px></td>
+	    <td align=right><a href="index.html">Home</a>&nbsp;<a href="#">About</a>&nbsp;<a href="#">Product</a>&nbsp;<a href="#">Gallery</a>&nbsp;<a href="#">Contact</a>&nbsp;</td>
+	  </tr>
+	</table>
+	
+	<hr align=center width=80%>
+	
+	<table width=60% align=center>
+	  <tr>
+	    <td align=center>
+	      <img src="images/contact_us.jpg" alt="" width=750px>
+
+	      <form name="contact" align=center action="" method="">
+	      	<table width=40% align=center>
+	      		<tr align=left>
+	      			<label>
+	      				<td>Name</td>
+	      				<td><input type="text" name="name"></td>
+	      			</label>
+	      		</tr>
+	      		<br><br>
+
+	      		<tr align=left>
+	      			<label>
+	      				<td>Email</td>
+	      				<td><input type="text" name="email"></td>
+	      			</label>
+	      		</tr>
+
+	      		<tr align=left>
+	      			<label>
+	      				<td>City</td>
+	      				<td>
+	      					<select name="city" onchange="cityFunc();">
+	      						<option selected disabled></option>
+	      						<option value="ajmer">Ajmer</option>
+	      						<option value="bikaner">Bikaner</option>
+	      						<option value="jaipur">Jaipur</option>
+	      						<option value="udaipur">Udaipur</option>
+	      					</select>
+	      				</td>
+	      			</label>
+	      		</tr>
+
+	      		<tr align="left" style="display:none;" id = "city-box">
+					<label>
+						<td>City</td>
+						<td><input type="city" name="cityText" disabled="true" width="100%"/></td>
+					</label>
+				</tr>
+
+	      		<tr align=left>
+	      			<label>
+	      				<td>Organization Name</td>
+	      				<td><input type="text" name="organization"></td>
+	      			</label>
+	      		</tr>
+
+	      		<tr align=left>
+	      			<label>
+	      				<td>Contact Number</td>
+	      				<td><input type="number" name="number"></td>
+	      			</label>
+	      		</tr>
+
+	      		<tr align=left>
+	      			<label>
+	      				<td>Message</td>
+	      				<td><textarea name="textarea"></textarea></td>
+	      			</label>
+	      		</tr>
+
+				<tr align=left>
+	      			<label>
+	      				<td><input type="submit" name="Submit" onclick="formValidation();"></td>
+	      			</label>
+	      		</tr>	      		
+	      	</table>
+	      </form>
+
+	    </td>
+	  </tr>
+	</table>
+
+	<hr align=center width=80%>
+
+	<table width=60% align="center">
+	  <tr>
+	    <td align=center>
+	    	<br><br>
+	    	&copy; Copyright 2016-17 | All rights reserved | Metacube Training
+	    </td>
+	  </tr>
+	</table>
+
+	<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>
