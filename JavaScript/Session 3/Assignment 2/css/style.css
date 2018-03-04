@@ -1,0 +1,29 @@
+ @import url('https://fonts.googleapis.com/css?family=Oxygen');
+
+* {
+	padding: 0;
+	margin: 0;
+	font-family: 'Oxygen', sans-serif;
+}
+
+.bg-color-grey {
+	background-color: #ddd;
+}
+
+.field {
+	display: flex;
+	padding: 10px;
+	background-color: #000;
+	color: #fff;
+	border: 1px solid #ddd;
+	border-radius: 5px;
+}
+
+.heading, .color, .input {
+	flex: 1;
+}
+
+section {
+	width: 40%;
+	margin: 20px auto;
+}
