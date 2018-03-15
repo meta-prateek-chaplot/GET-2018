@@ -22,7 +22,7 @@ import org.json.simple.parser.*;
 
 /**
  * this class contains APIs which returns output as per request from the client
- * @author Satyam Bhadoria
+ * @author Prateek Chaplot
  *
  */
 @Path("/employee")
