@@ -8,7 +8,7 @@ import java.util.Map;
 import entity.*;
 import enums.*;
 
-public class InMemoryDao implements BaseDao {
+public class InMemoryDao implements I_BaseDao {
 	// map to hold shopping products
 	Map<Integer , ShoppingCartProduct> productMap = new HashMap<>();
 	

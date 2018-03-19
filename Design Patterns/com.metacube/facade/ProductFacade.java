@@ -11,11 +11,12 @@ public class ProductFacade {
 	
 	private static ProductFacade productFacade;
 	
-	// singleton object
+	// Singleton object
 	public static ProductFacade getInstance() {
 		if (productFacade == null) {
 			productFacade = new ProductFacade();
 		}
+		
 		return productFacade;
 	}
 	

@@ -6,7 +6,7 @@ import java.util.List;
 import entity.*;
 import enums.*;
 
-public class InMemoryProductDao {
+public class InMemoryProductDao implements I_ProductDao {
 	// product list
 		static List<Product> productList = new ArrayList<Product>();
 		private static InMemoryProductDao inMemoryProductDao;
@@ -26,8 +26,8 @@ public class InMemoryProductDao {
 		public InMemoryProductDao(){
 			Product p1 = new Product(1,"Milk",38.0f,100);
 			Product p2 = new Product(2,"Bread",20.0f,100);
-			Product p3 = new Product(3,"Biscuit",30.0f,100);
-			Product p4 = new Product(4,"Mad angles",10.0f,100);
+			Product p3 = new Product(3,"Hide & Seek",30.0f,100);
+			Product p4 = new Product(4,"Kurkure",10.0f,100);
 			
 			productList.add(p1);
 			productList.add(p2);

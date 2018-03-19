@@ -5,7 +5,7 @@ import java.util.List;
 import entity.ShoppingCartProduct;
 import enums.Status;
 
-public interface BaseDao {
+public interface I_BaseDao {
 	public List<ShoppingCartProduct> getAllShoppingCartProducts();
 	public Status addShoppingProduct(ShoppingCartProduct p);
 	public Status deleteShoppingProduct(int id);
