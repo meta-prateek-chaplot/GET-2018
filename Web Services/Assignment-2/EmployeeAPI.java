@@ -1,6 +1,5 @@
 package com.metacube.employeedata;
 
-
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -28,6 +27,7 @@ import org.json.simple.parser.*;
 @Path("/employee")
 public class EmployeeAPI {
 	
+	// json parser required as json is req to store the object that is to be passed as string
 	private JSONParser parser = new JSONParser();
 	private File file = new File("C:/Users/admin/Documents/myWorkPlace/WebService-Session-2/src/com/employee/files/employee.json");
 
