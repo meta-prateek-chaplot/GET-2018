@@ -22,6 +22,10 @@ public class Stack {
 	 * pop functionality
 	 */
 	public void pop() {
+		if(obj.size() == 0) {
+			throw new ArrayIndexOutOfBoundsException();
+		}
+		
 		obj.remove(obj.size()-1);
 	}
 	

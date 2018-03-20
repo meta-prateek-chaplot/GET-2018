@@ -13,7 +13,7 @@ public class QueueTest {
 		q.enqueue("help");
 		q.enqueue("nice");
 		
-		Object[] actuals = new Object[] {"help", "nice", null, null, null};
+		Object[] actuals = new Object[] {"help", "nice"};
 		Object[] expecteds = q.getQueue();
 		
 		assertArrayEquals(expecteds, actuals);
@@ -28,7 +28,7 @@ public class QueueTest {
 		
 		q.dequeue();
 		
-		Object[] actuals = new Object[] {"5", null, null, null, null};
+		Object[] actuals = new Object[] {"5"};
 		Object[] expecteds = q.getQueue();
 		
 		assertArrayEquals(expecteds, actuals);
@@ -43,7 +43,7 @@ public class QueueTest {
 		
 		q.makeEmpty();
 		
-		Object[] actuals = new Object[] {null, null, null, null, null};
+		Object[] actuals = new Object[] {};
 		Object[] expecteds = q.getQueue();
 		
 		assertArrayEquals(expecteds, actuals);
@@ -58,7 +58,7 @@ public class QueueTest {
 		q.enqueue(33);
 		
 		Object expected = q.getFront();
-		Object actual = 33;
+		Object actual = 46;
 		
 		assertEquals(expected, actual);
 	}

@@ -1,32 +1,34 @@
 package com.metacube;
 
+import java.util.Arrays;
+
 public class Queue {
-	private Object[] queue = new Object[5];
-	private int size=0;
+	private Object[] queue = new Object[0];
 	
 	public void enqueue(Object obj) {
-		queue[size++] = obj;
+		queue = Arrays.copyOf(queue, queue.length+1);
+		
+		queue[queue.length-1] = obj;
 	}
 	
 	public void dequeue() {
-		for(int i=0; i<size; i++) {
-			queue[i] = queue[i+1];
+		if(queue.length == 0) {
+			throw new ArrayIndexOutOfBoundsException();
 		}
 		
-		size--;
+		queue = Arrays.copyOfRange(queue, 1, queue.length);
 	}
 	
 	public void makeEmpty() {
-		queue = new Object[5];
-		size=0;
+		queue = new Object[0];
 	}
 	
 	public Object getFront() {
-		return queue[size-1];
-	}
-	
-	public int getSize() {
-		return size;
+		if(queue.length == 0) {
+			throw new ArrayIndexOutOfBoundsException();
+		}
+		
+		return queue[0];
 	}
 	
 	public Object[] getQueue() {

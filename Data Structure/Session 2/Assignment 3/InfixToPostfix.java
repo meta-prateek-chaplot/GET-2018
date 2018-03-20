@@ -32,8 +32,8 @@ public class InfixToPostfix {
 					result += stack.pop();
 				}
 				
-				if(!stack.isEmpty() && stack.peek() != '(') {
-					return "Invalid Expression";
+				if(stack.isEmpty()) {
+					throw new ArithmeticException("Invalid Expression.");
 				} else {
 					stack.pop();
 				}
